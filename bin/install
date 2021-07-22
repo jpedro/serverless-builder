@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "==> Installing jq"
+yum install -y jq
+
+echo "==> Checking jq"
+which jq
+jq --version
+
+echo "==> Installing pipenv"
+pip install pipenv
+
+echo "==> Checking pipenv"
+which pipenv
+pipenv --version
+
+echo "==> Installing yq"
+curl -sLo /usr/bin/yq https://github.com/mikefarah/yq/releases/download/v4.11.1/yq_linux_arm64
+chmod +x /usr/bin/yq
+
+echo "==> Checking yq"
+which yq
+yq --version

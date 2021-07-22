@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+source ./bin/config.sh
+
+green "==> Building $IMAGE_NAME as $IMAGE_LATEST"
+docker build . -t $IMAGE_NAME --progress plain
+docker tag $IMAGE_NAME $IMAGE_LATEST
