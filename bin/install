@@ -16,7 +16,7 @@ which pipenv
 pipenv --version
 
 echo "==> Installing yq"
-curl -sLo /usr/bin/yq https://github.com/mikefarah/yq/releases/download/v4.11.1/yq_linux_arm64
+curl -sLo /usr/bin/yq https://github.com/mikefarah/yq/releases/download/v4.11.1/yq_linux_amd64
 chmod +x /usr/bin/yq
 
 echo "==> Checking yq"
