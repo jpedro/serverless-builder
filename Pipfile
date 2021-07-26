@@ -5,7 +5,7 @@ verify_ssl = true
 [packages]
 pyyaml = {version="*"}
 boto3 = {version="*"}
-moto = {version="*"}
+# moto = {version="*"}
 
 [dev-packages]
 pytest = {version="*"}
