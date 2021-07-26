@@ -1,3 +1,3 @@
-# DI DataLake Builder
+# Serverless Builder
 
-Image to run CI/CD pipelines for data lake code (lambdas, step functions, etc..).
+Image to run CI/CD pipelines for serverless code.
