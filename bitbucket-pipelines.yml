@@ -1,4 +1,4 @@
-image: docker.io/distributioninnovation/terraform-builder:tf0.14.7_tg0.26.0-1.0.1
+image: jpedrob/serverless-builder
 
 pipelines:
   default:
