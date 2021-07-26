@@ -1,24 +1,31 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "==> Installing jq"
+green() {
+  echo -e "\033[32;1m$@\033[0m"
+}
+
+green "==> Installing jq"
 yum install -y jq
 
-echo "==> Checking jq"
+green "==> Checking jq"
 which jq
 jq --version
 
-echo "==> Installing pipenv"
+green "==> Installing pipenv"
 pip install pipenv
 
-echo "==> Checking pipenv"
+green "==> Checking pipenv"
 which pipenv
 pipenv --version
 
-echo "==> Installing yq"
+green "==> Installing pipenv packages"
+pipenv install
+
+green "==> Installing yq"
 curl -sLo /usr/bin/yq https://github.com/mikefarah/yq/releases/download/v4.11.1/yq_linux_amd64
 chmod +x /usr/bin/yq
 
-echo "==> Checking yq"
+green "==> Checking yq"
 which yq
 yq --version

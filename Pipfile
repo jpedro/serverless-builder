@@ -1,0 +1,11 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[packages]
+pyyaml = {version="*"}
+boto3 = {version="*"}
+moto = {version="*"}
+
+[dev-packages]
+pytest = {version="*"}
