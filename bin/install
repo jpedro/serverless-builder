@@ -12,16 +12,6 @@ green "==> Checking jq"
 which jq
 jq --version
 
-green "==> Installing pipenv"
-pip install pipenv
-
-green "==> Checking pipenv"
-which pipenv
-pipenv --version
-
-green "==> Installing pipenv packages"
-pipenv install
-
 green "==> Installing yq"
 curl -sLo /usr/bin/yq https://github.com/mikefarah/yq/releases/download/v4.11.1/yq_linux_amd64
 chmod +x /usr/bin/yq
@@ -29,3 +19,18 @@ chmod +x /usr/bin/yq
 green "==> Checking yq"
 which yq
 yq --version
+
+green "==> Installing pipenv"
+pip install pipenv
+
+green "==> Checking pipenv"
+which pipenv
+pipenv --version
+
+# green "==> Installing pipenv packages"
+# pipenv install
+# pipenv lock
+# pipenv run pipenv lock -r > requirements.txt
+
+green "==> Installing pip packages"
+pip install -r requirements.txt

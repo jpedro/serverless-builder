@@ -4,3 +4,4 @@ WORKDIR /srv
 COPY . .
 
 RUN ["/srv/bin/install"]
+CMD ["pipenv", "shell"]
